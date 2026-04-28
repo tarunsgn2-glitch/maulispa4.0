@@ -341,7 +341,7 @@ function initHero(){
     if(bar){bar.style.width='0';setTimeout(()=>bar.style.width='100%',50);}
   }
   if(bar){bar.style.transition='width 6s linear';setTimeout(()=>bar.style.width='100%',100);}
-  heroTimer=setInterval(nextVideo,6000);
+  heroTimer=setInterval(nextVideo,36000);
 }
 
 /* ── NAV ──────────────────────────────────────────────────── */
