@@ -9,19 +9,19 @@
 <meta property="og:title" content="Mauli Spa - Jahan Sukoon Milta Hai">
 <meta property="og:description" content="Prachin Ayurvedic Paddhati se Payein Sampoorna Swasthya. Best Ayurvedic Massage in Pune.">
 <meta property="og:image" content="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=630&fit=crop">
-<meta property="og:url" content="https://maulispa.com">
+<meta property="og:url" content="https://maulispa.in">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Mauli Spa - Mauli Ayurvedic Massage Therapy">
+<meta name="twitter:title" content="Mauli Spa - Jahan Sukoon Milta Hai">
 <meta name="twitter:description" content="Best Ayurvedic Massage Therapy in Pune, Kothrud">
 <meta name="twitter:image" content="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1200&h=630&fit=crop">
-<link rel="canonical" href="https://maulispa.com">
+<link rel="canonical" href="https://maulispa.in">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Upright:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500;600&family=Noto+Sans+Devanagari:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"DaySpa","name":"Mauli Spa","description":"Best Ayurvedic Massage Therapy in Pune","url":"https://maulispa.com","telephone":"+919307360513","address":{"@type":"PostalAddress","streetAddress":"Shop No 112, First Floor, The Business Hub, Karve Rd","addressLocality":"Kothrud","addressRegion":"Maharashtra","postalCode":"411038","addressCountry":"IN"},"openingHours":"Mo-Su 10:00-21:00","priceRange":"₹₹"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"DaySpa","name":"Mauli Spa","description":"Best Ayurvedic Massage Therapy in Pune","url":"https://maulispa.in","telephone":"+919307360513","address":{"@type":"PostalAddress","streetAddress":"Shop No 112, First Floor, The Business Hub, Karve Rd","addressLocality":"Kothrud","addressRegion":"Maharashtra","postalCode":"411038","addressCountry":"IN"},"openingHours":"Mo-Su 10:00-21:00","priceRange":"₹₹"}</script>
 </head>
 <body>
 
@@ -31,7 +31,7 @@
     <div class="offer-star-badge"><i class="fas fa-star"></i></div>
     <div class="offer-content">
       <span class="offer-tag" data-i18n="offerTag">LIMITED OFFER</span>
-      <h3 data-i18n="offerTitle">Free Facial for First 50 Members !</h3>
+      <h3 data-i18n="offerTitle">Free Facial for First 50 Members!</h3>
       <p data-i18n="offerDesc">Join today + get 20% off your first session. Click to explore!</p>
     </div>
     <button class="offer-close-btn" id="offerCloseBtn" aria-label="Close"><i class="fas fa-times"></i></button>
@@ -44,7 +44,7 @@
   <div class="header-container">
     <a class="logo-wrap" href="#" onclick="navTo('home');return false;">
       <div class="logo-icon-wrap">
-        <img src="assets/logo/logo.jpeg" alt="Mauli Spa Logo" class="logo-img" id="logoImg">
+        <img src="https://via.placeholder.com/56x56/c8a96e/1a2e0a?text=M" alt="Mauli Spa Logo" class="logo-img" id="logoImg">
       </div>
       <div class="logo-text-wrap">
         <span class="logo-name">Mauli Spa</span>
@@ -60,9 +60,14 @@
       <a href="#" class="nl" data-page="about" onclick="navTo('about');setNavActive(this);return false;" data-i18n="navAbout">About</a>
       <a href="#" class="nl" data-page="contact" onclick="navTo('contact');setNavActive(this);return false;" data-i18n="navContact">Contact</a>
       <a href="#" class="nl" data-page="more" onclick="navTo('more');setNavActive(this);return false;" data-i18n="navMore">More</a>
+
     </nav>
 
     <div class="header-right">
+      <div class="visit-wrap">
+        <i class="fas fa-eye"></i>
+        <span id="visitCount">0</span>
+      </div>
       <div class="lang-wrap" id="langWrap">
         <button class="lang-trigger" onclick="toggleLangMenu()" aria-label="Language">
           <i class="fas fa-globe"></i>
@@ -97,41 +102,28 @@
 <section id="page-home" class="page active">
 
   <!-- HERO -->
-  <div id="page-home" class="page active">
-
-   <section class="hero" id="home">
-  <div class="hero-slides">
-    <div class="hero-slide active">
-      <video autoplay muted loop playsinline class="hero-video">
+  <div class="hero">
+    <div class="hero-video-wrap" id="heroVideoWrap">
+      <!-- 6 hero videos — Full HD auto-fit, rotate every 6s via JS -->
+      <video class="hero-video active" autoplay muted loop playsinline preload="auto">
         <source src="assets/hero/hero.mp4" type="video/mp4">
       </video>
-    </div>
-    <div class="hero-slide">
-      <video autoplay muted loop playsinline class="hero-video">
+      <video class="hero-video" autoplay muted loop playsinline preload="none">
         <source src="assets/hero/hero2.mp4" type="video/mp4">
       </video>
-    </div>
-    <div class="hero-slide">
-      <video autoplay muted loop playsinline class="hero-video">
+      <video class="hero-video" autoplay muted loop playsinline preload="none">
         <source src="assets/hero/hero3.mp4" type="video/mp4">
       </video>
-    </div>
-    <div class="hero-slide">
-      <video autoplay muted loop playsinline class="hero-video">
+      <video class="hero-video" autoplay muted loop playsinline preload="none">
         <source src="assets/hero/hero4.mp4" type="video/mp4">
       </video>
-    </div>
-    <div class="hero-slide">
-      <video autoplay muted loop playsinline class="hero-video">
+      <video class="hero-video" autoplay muted loop playsinline preload="none">
         <source src="assets/hero/hero5.mp4" type="video/mp4">
       </video>
-    </div>
-    <div class="hero-slide">
-      <video autoplay muted loop playsinline class="hero-video">
+      <video class="hero-video" autoplay muted loop playsinline preload="none">
         <source src="assets/hero/hero6.mp4" type="video/mp4">
       </video>
     </div>
-  </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <p class="hero-eyebrow" data-i18n="heroEyebrow">Prachin Ayurvedic Paddhati</p>
@@ -154,48 +146,64 @@
       <div class="sec-badge" data-i18n="top3Badge">Top Demanding Therapies</div>
       <h2 class="sec-h2" data-i18n="top3Title">Our Most Loved Services</h2>
       <div class="top3-grid">
-        <div class="top3-card">
-          <video autoplay muted loop playsinline class="t3-bg-vid"><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"></video>
+
+        <!-- CARD 1: Deep Tissue — stroke video plays on hover of ANY card -->
+        <div class="top3-card top3-card-hover" data-img="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=700&h=500&fit=crop">
+          <video class="top3-stroke-video" muted loop playsinline preload="none">
+            <source src="assets/hero/hero.mp4" type="video/mp4">
+          </video>
+          <div class="top3-bg-img" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=700&h=500&fit=crop')"></div>
           <div class="top3-overlay">
             <div class="top3-info">
-              <h3 data-i18n="t3_1_name">Deep Tissue Therapy</h3>
-              <p data-i18n="t3_1_desc">Dard se rahat ke liye</p>
-              <div class="top3-meta"><span class="t3-price">₹2,199</span><span class="t3-dur"><i class="fas fa-clock"></i> <span data-i18n="t3_1_dur">70 mins</span></span></div>
+              <h3 data-i18n="thDeepTissue">Deep Tissue Therapy</h3>
+              <p data-i18n="thDeepTissueShort">Dard se rahat ke liye</p>
+              <div class="top3-meta"><span class="t3-price" data-i18n="thDeepTissuePrice">₹2,199</span><span class="t3-dur"><i class="fas fa-clock"></i> <span data-i18n="thDeepTissueDur">70 mins</span></span></div>
             </div>
             <div class="top3-btns">
               <button class="btn-gold btn-sm" onclick="navTo('contact')" data-i18n="bookNow">Book Now</button>
-              <button class="btn-ghost btn-sm" onclick="openTherapyModal(4)" data-i18n="seeMoreBtn">See More</button>
+              <button class="btn-ghost btn-sm" onclick="openTherapyModal(4)" data-i18n="seeMore">See More</button>
             </div>
           </div>
         </div>
-        <div class="top3-card">
-          <video autoplay muted loop playsinline class="t3-bg-vid"><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"></video>
+
+        <!-- CARD 2: Til Tel — stroke video plays on hover of ANY card -->
+        <div class="top3-card top3-card-hover" data-img="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=700&h=500&fit=crop">
+          <video class="top3-stroke-video" muted loop playsinline preload="none">
+            <source src="assets/hero/hero2.mp4" type="video/mp4">
+          </video>
+          <div class="top3-bg-img" style="background-image:url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=700&h=500&fit=crop')"></div>
           <div class="top3-overlay">
             <div class="top3-info">
-              <h3 data-i18n="t3_2_name">Til Tel Massage</h3>
-              <p data-i18n="t3_2_desc">Traditional sesame warmth</p>
-              <div class="top3-meta"><span class="t3-price">₹1,499</span><span class="t3-dur"><i class="fas fa-clock"></i> <span data-i18n="t3_2_dur">60 mins</span></span></div>
+              <h3 data-i18n="thTilTel">Til Tel Massage</h3>
+              <p data-i18n="thTilTelShort">Traditional sesame warmth</p>
+              <div class="top3-meta"><span class="t3-price" data-i18n="thTilTelPrice">₹1,499</span><span class="t3-dur"><i class="fas fa-clock"></i> <span data-i18n="thTilTelDur">60 mins</span></span></div>
             </div>
             <div class="top3-btns">
               <button class="btn-gold btn-sm" onclick="navTo('contact')" data-i18n="bookNow">Book Now</button>
-              <button class="btn-ghost btn-sm" onclick="openTherapyModal(7)" data-i18n="seeMoreBtn">See More</button>
+              <button class="btn-ghost btn-sm" onclick="openTherapyModal(7)" data-i18n="seeMore">See More</button>
             </div>
           </div>
         </div>
-        <div class="top3-card">
-          <video autoplay muted loop playsinline class="t3-bg-vid"><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"></video>
+
+        <!-- CARD 3: Back Pain — stroke video plays on hover of ANY card -->
+        <div class="top3-card top3-card-hover" data-img="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=700&h=500&fit=crop">
+          <video class="top3-stroke-video" muted loop playsinline preload="none">
+            <source src="assets/hero/hero3.mp4" type="video/mp4">
+          </video>
+          <div class="top3-bg-img" style="background-image:url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=700&h=500&fit=crop')"></div>
           <div class="top3-overlay">
             <div class="top3-info">
-              <h3 data-i18n="t3_3_name">Back Pain Massage</h3>
-              <p data-i18n="t3_3_desc">Peeth dard se turant rahat</p>
-              <div class="top3-meta"><span class="t3-price">₹999</span><span class="t3-dur"><i class="fas fa-clock"></i> <span data-i18n="t3_3_dur">30 mins</span></span></div>
+              <h3 data-i18n="thBackPain">Back Pain Massage</h3>
+              <p data-i18n="thBackPainShort">Peeth dard se turant rahat</p>
+              <div class="top3-meta"><span class="t3-price" data-i18n="thBackPainPrice">₹999</span><span class="t3-dur"><i class="fas fa-clock"></i> <span data-i18n="thBackPainDur">30 mins</span></span></div>
             </div>
             <div class="top3-btns">
               <button class="btn-gold btn-sm" onclick="navTo('contact')" data-i18n="bookNow">Book Now</button>
-              <button class="btn-ghost btn-sm" onclick="openTherapyModal(10)" data-i18n="seeMoreBtn">See More</button>
+              <button class="btn-ghost btn-sm" onclick="openTherapyModal(10)" data-i18n="seeMore">See More</button>
             </div>
           </div>
         </div>
+
       </div>
       <div class="see-all-wrap">
         <button class="btn-outline" onclick="navTo('therapies')" data-i18n="seeAllTherapies">See All Therapies →</button>
@@ -296,14 +304,23 @@
   <div class="container" style="padding:60px 20px">
     <div class="sec-badge" data-i18n="therapiesBadge">All Services</div>
     <h2 class="sec-h2" data-i18n="therapiesTitle">Hamari Wellness Therapies</h2>
+    <!-- Stroke Video for Therapies Section -->
+    <div class="stroke-video-wrap">
+      <video class="stroke-video" autoplay muted loop playsinline>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      </video>
+      <div class="stroke-video-overlay">
+        <span data-i18n="strokeVideoLabel2">Wellness Therapy Experience</span>
+      </div>
+    </div>
     <div class="therapies-grid" id="therapiesGrid"></div>
   </div>
   <div class="hygiene-strip">
     <div class="container"><div class="hygiene-grid">
-      <div class="hy-item"><i class="fas fa-user-md"></i><h4 data-i18n="hyg1_h">Certified Therapists</h4><p data-i18n="hyg1_p">Professional aur certified team</p></div>
-      <div class="hy-item"><i class="fas fa-leaf"></i><h4 data-i18n="hyg2_h">Pure Natural Oils</h4><p data-i18n="hyg2_p">100% natural oils ka istemal</p></div>
-      <div class="hy-item"><i class="fas fa-broom"></i><h4 data-i18n="hyg3_h">Disposable Sheets</h4><p data-i18n="hyg3_p">Fresh sheets har session mein</p></div>
-      <div class="hy-item"><i class="fas fa-spray-can"></i><h4 data-i18n="hyg4_h">Sanitized Rooms</h4><p data-i18n="hyg4_p">Deep sanitized after every client</p></div>
+      <div class="hy-item"><i class="fas fa-user-md"></i><h4 data-i18n="hygCertified">Certified Therapists</h4><p data-i18n="hygCertifiedP">Professional aur certified team</p></div>
+      <div class="hy-item"><i class="fas fa-leaf"></i><h4 data-i18n="hygNatural">Pure Natural Oils</h4><p data-i18n="hygNaturalP">100% natural oils ka istemal</p></div>
+      <div class="hy-item"><i class="fas fa-broom"></i><h4 data-i18n="hygDisposable">Disposable Sheets</h4><p data-i18n="hygDisposableP">Fresh sheets har session mein</p></div>
+      <div class="hy-item"><i class="fas fa-spray-can"></i><h4 data-i18n="hygSanitized">Sanitized Rooms</h4><p data-i18n="hygSanitizedP">Deep sanitized after every client</p></div>
     </div></div>
   </div>
 </section>
@@ -318,7 +335,7 @@
   </div>
   <div class="container" style="padding:60px 20px">
     <!-- Social Strip -->
-    <h3 class="sec-h2" data-i18n="followSocial" style="text-align:center;margin-bottom:20px;">Follow us on Social Media</h3>
+    <div class="social-section-header" data-i18n="followUs">Follow Us On Social Media</div>
     <div class="social-strip">
       <a href="https://instagram.com/maulispa" target="_blank" class="soc-btn instagram"><i class="fab fa-instagram"></i> Instagram</a>
       <a href="https://facebook.com/@maulispa" target="_blank" class="soc-btn facebook"><i class="fab fa-facebook"></i> Facebook</a>
@@ -376,38 +393,38 @@
     <!-- Plans -->
     <div class="plans-grid">
       <div class="plan-card">
-        <div class="plan-header"><h3 data-i18n="mem1_title">Silver</h3><div class="plan-price">₹2,199<span data-i18n="mem_mo">/mo</span></div></div>
+        <div class="plan-header"><h3 data-i18n="planSilver">Silver</h3><div class="plan-price">₹2,199<span>/mo</span></div></div>
         <ul class="plan-feats">
-          <li><i class="fas fa-check"></i> <span data-i18n="mem1_f1">1 Session / month</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="mem1_f2">5% Off extra sessions</span></li>
-          <li class="no"><i class="fas fa-times"></i> <span data-i18n="mem_f_guest">Guest Pass</span></li>
-          <li class="no"><i class="fas fa-times"></i> <span data-i18n="mem_f_support">Priority Support</span></li>
-          <li class="no"><i class="fas fa-times"></i> <span data-i18n="mem_f_dur">Extended Duration</span></li>
+          <li><i class="fas fa-check"></i> <span data-i18n="silver1">1 Session / month</span></li>
+          <li><i class="fas fa-check"></i> <span data-i18n="silver2">5% Off extra sessions</span></li>
+          <li class="no"><i class="fas fa-times"></i> <span data-i18n="silver3">Guest Pass</span></li>
+          <li class="no"><i class="fas fa-times"></i> <span data-i18n="silver4">Priority Support</span></li>
+          <li class="no"><i class="fas fa-times"></i> <span data-i18n="silver5">Extended Duration</span></li>
         </ul>
-        <button class="btn-outline" onclick="navTo('contact')" data-i18n="joinBtn">Join Silver</button>
+        <button class="btn-outline" onclick="navTo('contact')" data-i18n="joinSilver">Join Silver</button>
       </div>
       <div class="plan-card bestseller">
-        <div class="plan-badge" data-i18n="bestSeller">⭐ Best Seller</div>
-        <div class="plan-header"><h3 data-i18n="mem2_title">Gold</h3><div class="plan-price">₹4,199<span data-i18n="mem_mo">/mo</span></div></div>
+        <div class="plan-badge">⭐ <span data-i18n="bestSeller">Best Seller</span></div>
+        <div class="plan-header"><h3 data-i18n="planGold">Gold</h3><div class="plan-price">₹4,199<span>/mo</span></div></div>
         <ul class="plan-feats">
-          <li><i class="fas fa-check"></i> <span data-i18n="mem2_f1">2 Sessions / month</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="mem2_f2">15% Off extra sessions</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="mem2_f3">1 Guest Pass / month</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="mem_f_support">Priority Support</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="mem2_f4">30 days validity</span></li>
+          <li><i class="fas fa-check"></i> <span data-i18n="gold1">2 Sessions / month</span></li>
+          <li><i class="fas fa-check"></i> <span data-i18n="gold2">15% Off extra sessions</span></li>
+          <li><i class="fas fa-check"></i> <span data-i18n="gold3">1 Guest Pass / month</span></li>
+          <li><i class="fas fa-check"></i> <span data-i18n="gold4">Priority Support</span></li>
+          <li><i class="fas fa-check"></i> <span data-i18n="gold5">30 days validity</span></li>
         </ul>
-        <button class="btn-gold" onclick="navTo('contact')" data-i18n="joinBtn">Join Gold</button>
+        <button class="btn-gold" onclick="navTo('contact')" data-i18n="joinGold">Join Gold</button>
       </div>
       <div class="plan-card platinum">
-        <div class="plan-header"><h3 data-i18n="mem3_title">Platinum</h3><div class="plan-price">₹8,099<span data-i18n="mem_mo">/mo</span></div></div>
+        <div class="plan-header"><h3 data-i18n="planPlatinum">Platinum</h3><div class="plan-price">₹8,099<span>/mo</span></div></div>
         <ul class="plan-feats">
-          <li><i class="fas fa-check"></i> <span data-i18n="mem3_f1">4 Sessions / month</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="mem3_f2">25% Off extra sessions</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="mem3_f3">2 Guest Pass / month</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="mem_f_support">Priority Support</span></li>
-          <li><i class="fas fa-check"></i> <span data-i18n="mem3_f4">5+30 days validity</span></li>
+          <li><i class="fas fa-check"></i> <span data-i18n="plat1">4 Sessions / month</span></li>
+          <li><i class="fas fa-check"></i> <span data-i18n="plat2">25% Off extra sessions</span></li>
+          <li><i class="fas fa-check"></i> <span data-i18n="plat3">2 Guest Pass / month</span></li>
+          <li><i class="fas fa-check"></i> <span data-i18n="plat4">Priority Support</span></li>
+          <li><i class="fas fa-check"></i> <span data-i18n="plat5">5+30 days validity</span></li>
         </ul>
-        <button class="btn-outline" onclick="navTo('contact')" data-i18n="joinBtn">Join Platinum</button>
+        <button class="btn-outline" onclick="navTo('contact')" data-i18n="joinPlatinum">Join Platinum</button>
       </div>
     </div>
     <!-- Member Testimonials -->
@@ -422,9 +439,9 @@
     <div class="faqs-wrap" style="margin-top:60px">
       <h3 class="sec-h2" data-i18n="faqTitle">Frequently Asked Questions</h3>
       <div class="faq-list">
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="mfq1_q">Kya membership cancel kar sakta hoon?</span> <span>+</span></button><div class="faq-a" data-i18n="mfq1_a">Haan, kisi bhi time cancel kar sakte hain. Pro-rata refund milega unused sessions ka.</div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="mfq2_q">Unused sessions agle mahine carry forward honge?</span> <span>+</span></button><div class="faq-a" data-i18n="mfq2_a">Bilkul! Sessions expire nahi hote. Agle mahine mein use kar sakte hain.</div></div>
-        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="mfq3_q">Kya membership kisi aur ko gift kar sakta hoon?</span> <span>+</span></button><div class="faq-a" data-i18n="mfq3_a">Haan! Gift card available hai. Kisi bhi priyajan ko gift karein.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="faq1q">Kya membership cancel kar sakta hoon?</span> <span>+</span></button><div class="faq-a" data-i18n="faq1a">Haan, kisi bhi time cancel kar sakte hain. Pro-rata refund milega unused sessions ka.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="faq2q">Unused sessions agle mahine carry forward honge?</span> <span>+</span></button><div class="faq-a" data-i18n="faq2a">Bilkul! Sessions expire nahi hote. Agle mahine mein use kar sakte hain.</div></div>
+        <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="faq3q">Kya membership kisi aur ko gift kar sakta hoon?</span> <span>+</span></button><div class="faq-a" data-i18n="faq3a">Haan! Gift card available hai. Kisi bhi priyajan ko gift karein.</div></div>
       </div>
     </div>
   </div>
@@ -436,7 +453,7 @@
 <section id="page-about" class="page">
   <div class="page-banner" style="background-image:url('https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=1920&h=600&fit=crop')">
     <div class="pb-overlay"></div>
-    <div class="pb-content"><h1 data-i18n="aboutH1">About Mauli Spa</h1><p data-i18n="aboutSub">Jahan Sukoon Milta Hai</p></div>
+    <div class="pb-content"><h1 data-i18n="aboutH1">About Mauli Spa</h1><p>Jahan Sukoon Milta Hai</p></div>
   </div>
   <div class="container" style="padding:60px 20px">
     <div class="about-grid">
@@ -466,11 +483,11 @@
     <!-- Team -->
     <h3 class="sec-h2" style="margin-bottom:30px" data-i18n="ourTeam">Our Team</h3>
     <div class="team-grid">
-      <div class="team-card"><div class="team-img" style="background-image:url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop')"></div><h4 data-i18n="team1_n">Dr. Savita Mauli</h4><p data-i18n="team1_r">Founder & Head Therapist</p><small data-i18n="team1_e">15+ Years Experience</small></div>
-      <div class="team-card"><div class="team-img" style="background-image:url('https://images.unsplash.com/photo-1614644147798-f8c0fc9da7f6?w=300&h=300&fit=crop')"></div><h4 data-i18n="team2_n">Priya Sharma</h4><p data-i18n="team2_r">Senior Ayurvedic Therapist</p><small data-i18n="team2_e">8+ Years Experience</small></div>
-      <div class="team-card"><div class="team-img" style="background-image:url('https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=300&h=300&fit=crop')"></div><h4 data-i18n="team3_n">Ravi Kumar</h4><p data-i18n="team3_r">Deep Tissue Specialist</p><small data-i18n="team3_e">6+ Years Experience</small></div>
-      <div class="team-card"><div class="team-img" style="background-image:url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop')"></div><h4 data-i18n="team4_n">Anita Patil</h4><p data-i18n="team4_r">Potli & Herbal Expert</p><small data-i18n="team4_e">7+ Years Experience</small></div>
-      <div class="team-card special-card"><div class="team-img" style="background-image:url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop')"></div><h4 data-i18n="team5_n">Tarun Kumar</h4><p data-i18n="team5_r">Marketing Expert</p><small data-i18n="team5_e">Last 5 Years · Lead Knight</small><a href="https://instagram.com/lead.knight" target="_blank" class="btn-gold btn-sm" style="margin-top:10px;display:inline-flex;align-items:center;gap:6px;"><i class="fab fa-instagram"></i> Connect</a></div>
+      <div class="team-card"><div class="team-img" style="background-image:url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&h=300&fit=crop')"></div><h4>Dr. Savita Mauli</h4><p>Founder & Head Therapist</p><small>15+ Years Experience</small></div>
+      <div class="team-card"><div class="team-img" style="background-image:url('https://images.unsplash.com/photo-1614644147798-f8c0fc9da7f6?w=300&h=300&fit=crop')"></div><h4>Priya Sharma</h4><p>Senior Ayurvedic Therapist</p><small>8+ Years Experience</small></div>
+      <div class="team-card"><div class="team-img" style="background-image:url('https://images.unsplash.com/photo-1607990281513-2c110a25bd8c?w=300&h=300&fit=crop')"></div><h4>Ravi Kumar</h4><p>Deep Tissue Specialist</p><small>6+ Years Experience</small></div>
+      <div class="team-card"><div class="team-img" style="background-image:url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&h=300&fit=crop')"></div><h4>Anita Patil</h4><p>Potli & Herbal Expert</p><small>7+ Years Experience</small></div>
+      <div class="team-card special-card"><div class="team-img" style="background-image:url('https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop')"></div><h4>Tarun Kumar</h4><p>Marketing Expert</p><small>Last 5 Years · Lead Knight</small><a href="https://instagram.com/lead.knight" target="_blank" class="btn-gold btn-sm" style="margin-top:10px;display:inline-flex;align-items:center;gap:6px;"><i class="fab fa-instagram"></i> Connect</a></div>
     </div>
   </div>
 </section>
@@ -512,8 +529,8 @@
         <!-- FAQs -->
         <div class="contact-faqs">
           <h4 data-i18n="quickFaqs">Quick FAQs</h4>
-          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="cfq1_q">Kya pre-booking zaroori hai?</span> <span>+</span></button><div class="faq-a" data-i18n="cfq1_a">Walk-in available hai, lekin advance booking recommended hai for guaranteed slot.</div></div>
-          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span data-i18n="cfq2_q">Kya parking available hai?</span> <span>+</span></button><div class="faq-a" data-i18n="cfq2_a">Haan, The Business Hub mein ample parking available hai.</div></div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="cfaq1q">Kya pre-booking zaroori hai?</span> <span>+</span></button><div class="faq-a" data-i18n="cfaq1a">Walk-in available hai, lekin advance booking recommended hai for guaranteed slot.</div></div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)"><span class="faq-q-text" data-i18n="cfaq2q">Kya parking available hai?</span> <span>+</span></button><div class="faq-a" data-i18n="cfaq2a">Haan, The Business Hub mein ample parking available hai.</div></div>
         </div>
       </div>
       <div class="contact-info-side">
@@ -599,7 +616,7 @@
           <div class="lg-item"><i class="fas fa-book-open"></i><h5 data-i18n="l1h">Ayurveda Basics</h5><p data-i18n="l1p">Introduction to Ayurvedic principles</p></div>
           <div class="lg-item"><i class="fas fa-hands"></i><h5 data-i18n="l2h">Massage Techniques</h5><p data-i18n="l2p">Learn professional massage skills</p></div>
           <div class="lg-item"><i class="fas fa-flask"></i><h5 data-i18n="l3h">Oil & Herb Knowledge</h5><p data-i18n="l3p">Pure Ayurvedic oils aur herbs</p></div>
-          <div class="lg-item"><i class="fas fa-certificate"></i><h5 data-i18n="l4h">Certification Course</h5><p data-i18n="l4p">Get certified as Ayurvedic therapist</p><div style="margin-top:6px;"><span style="background:var(--gold);color:#0d1a03;font-size:0.7rem;padding:2px 6px;border-radius:4px;font-weight:bold;" data-i18n="comingSoon">Coming Soon</span></div></div>
+          <div class="lg-item coming-soon-item"><i class="fas fa-certificate"></i><h5 data-i18n="l4h">Certification Course</h5><p data-i18n="l4p">Get certified as Ayurvedic therapist</p><span class="coming-soon-badge" data-i18n="comingSoon">Coming Soon</span></div>
         </div>
         <button class="btn-gold" onclick="openLearnModal()" data-i18n="learnEnroll">Enroll Now</button>
       </div>
@@ -616,7 +633,33 @@
   </div>
 </section>
 
+<!-- ═══════════════════════════════════════════
+     PAGE: TERMS & CONDITIONS
+═══════════════════════════════════════════ -->
+<section id="page-terms" class="page">
+  <div class="page-banner" style="background-image:url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&h=400&fit=crop')">
+    <div class="pb-overlay"></div>
+    <div class="pb-content"><h1 data-i18n="termsH1">Terms &amp; Conditions</h1></div>
+  </div>
+  <div class="container legal-page" style="padding:60px 20px">
+    <p class="legal-updated" data-i18n="legalUpdated">Last Updated: April 2026</p>
+    <div id="termsContent"></div>
+  </div>
+</section>
 
+<!-- ═══════════════════════════════════════════
+     PAGE: PRIVACY POLICY
+═══════════════════════════════════════════ -->
+<section id="page-privacy" class="page">
+  <div class="page-banner" style="background-image:url('https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1920&h=400&fit=crop')">
+    <div class="pb-overlay"></div>
+    <div class="pb-content"><h1 data-i18n="privacyH1">Privacy Policy</h1></div>
+  </div>
+  <div class="container legal-page" style="padding:60px 20px">
+    <p class="legal-updated" data-i18n="legalUpdated">Last Updated: April 2026</p>
+    <div id="privacyContent"></div>
+  </div>
+</section>
 
 </main><!-- /app -->
 
@@ -684,8 +727,8 @@
     <div class="container footer-bottom-inner">
       <p>© 2026 Mauli Ayurvedic Massage Therapy. All Rights Reserved. Designed by <a href="https://wa.me/919307360513" target="_blank">Leadknight</a> <a href="https://instagram.com/lead.knight" target="_blank" style="margin-left:4px"><i class="fab fa-instagram"></i></a></p>
       <div class="legal-footer-links">
-        <a href="#" onclick="openLegalModal('terms');return false;" data-i18n="navTerms">Terms &amp; Conditions</a>
-        <a href="#" onclick="openLegalModal('privacy');return false;" data-i18n="navPrivacy">Privacy Policy</a>
+        <a href="#" onclick="openLegalPopup('terms');return false;" data-i18n="navTerms">Terms &amp; Conditions</a>
+        <a href="#" onclick="openLegalPopup('privacy');return false;" data-i18n="navPrivacy">Privacy Policy</a>
       </div>
     </div>
   </div>
@@ -702,19 +745,19 @@
   <span class="wa-tooltip">Chat on WhatsApp</span>
 </a>
 
-<!-- THERAPY DETAIL MODAL -->
-<div class="modal-overlay" id="therapyModal">
-  <div class="modal-box" id="therapyModalBox">
-    <button class="modal-close-btn" onclick="closeTherapyModal()"><i class="fas fa-times"></i> <span data-i18n="closeBtn">Close</span></button>
-    <div id="therapyModalContent"></div>
+<!-- LEGAL POPUP MODAL -->
+<div class="modal-overlay" id="legalPopupModal">
+  <div class="modal-box" style="max-width:800px;max-height:80vh;overflow-y:auto;">
+    <button class="modal-close-btn" onclick="closeModal('legalPopupModal')"><i class="fas fa-times"></i> <span data-i18n="closeBtn">Close</span></button>
+    <div id="legalPopupContent"></div>
   </div>
 </div>
 
-<!-- LEGAL MODAL -->
-<div class="modal-overlay" id="legalModal">
-  <div class="modal-box legal-page">
-    <button class="modal-close-btn" onclick="closeLegalModal()"><i class="fas fa-times"></i> <span data-i18n="closeBtn">Close</span></button>
-    <div id="legalModalContent"></div>
+<!-- THERAPY DETAIL MODAL -->
+<div class="modal-overlay" id="therapyModal">
+  <div class="modal-box" id="therapyModalBox">
+    <button class="modal-close-btn" onclick="closeTherapyModal()"><i class="fas fa-times"></i> Close</button>
+    <div id="therapyModalContent"></div>
   </div>
 </div>
 
