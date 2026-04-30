@@ -64,10 +64,6 @@
     </nav>
 
     <div class="header-right">
-      <div class="visit-wrap">
-        <i class="fas fa-eye"></i>
-        <span id="visitCount">0</span>
-      </div>
       <div class="lang-wrap" id="langWrap">
         <button class="lang-trigger" onclick="toggleLangMenu()" aria-label="Language">
           <i class="fas fa-globe"></i>
@@ -223,6 +219,9 @@
         <div class="why-card"><div class="why-icon"><i class="fas fa-shield-alt"></i></div><h3 data-i18n="w4h">Hygiene First</h3><p data-i18n="w4p">Disposable sheets aur sanitized rooms har baar</p></div>
         <div class="why-card"><div class="why-icon"><i class="fas fa-certificate"></i></div><h3 data-i18n="w5h">Certified Center</h3><p data-i18n="w5p">Government certified Ayurvedic wellness center</p></div>
         <div class="why-card"><div class="why-icon"><i class="fas fa-clock"></i></div><h3 data-i18n="w6h">7 Days Open</h3><p data-i18n="w6p">Mon–Sun: 10 AM – 9 PM. Aapki suvidha ke liye</p></div>
+        <div class="why-card"><div class="why-icon"><i class="fas fa-door-closed"></i></div><h3 data-i18n="w7h">3 Private Cabins</h3><p data-i18n="w7p">Har cabin mein poori privacy — sirf aap aur aapka sukoon</p></div>
+        <div class="why-card"><div class="why-icon"><i class="fas fa-wind"></i></div><h3 data-i18n="w8h">Fan + Central AC</h3><p data-i18n="w8p">Har cabin mein 1 dedicated fan aur centralised AC — perfect cooling har mausam mein</p></div>
+        <div class="why-card"><div class="why-icon"><i class="fas fa-shower"></i></div><h3 data-i18n="w9h">Premium Bathroom</h3><p data-i18n="w9p">Combined bathroom with geyser, hot &amp; cold shower, mini hotel shop, disposable sheets &amp; garments</p></div>
       </div>
     </div>
   </div>
@@ -304,15 +303,7 @@
   <div class="container" style="padding:60px 20px">
     <div class="sec-badge" data-i18n="therapiesBadge">All Services</div>
     <h2 class="sec-h2" data-i18n="therapiesTitle">Hamari Wellness Therapies</h2>
-    <!-- Stroke Video for Therapies Section -->
-    <div class="stroke-video-wrap">
-      <video class="stroke-video" autoplay muted loop playsinline>
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
-      <div class="stroke-video-overlay">
-        <span data-i18n="strokeVideoLabel2">Wellness Therapy Experience</span>
-      </div>
-    </div>
+
     <div class="therapies-grid" id="therapiesGrid"></div>
   </div>
   <div class="hygiene-strip">
@@ -616,7 +607,8 @@
           <div class="lg-item"><i class="fas fa-book-open"></i><h5 data-i18n="l1h">Ayurveda Basics</h5><p data-i18n="l1p">Introduction to Ayurvedic principles</p></div>
           <div class="lg-item"><i class="fas fa-hands"></i><h5 data-i18n="l2h">Massage Techniques</h5><p data-i18n="l2p">Learn professional massage skills</p></div>
           <div class="lg-item"><i class="fas fa-flask"></i><h5 data-i18n="l3h">Oil & Herb Knowledge</h5><p data-i18n="l3p">Pure Ayurvedic oils aur herbs</p></div>
-          <div class="lg-item coming-soon-item"><i class="fas fa-certificate"></i><h5 data-i18n="l4h">Certification Course</h5><p data-i18n="l4p">Get certified as Ayurvedic therapist</p><span class="coming-soon-badge" data-i18n="comingSoon">Coming Soon</span></div>
+          <div class="lg-item cert-item"><i class="fas fa-certificate"></i><h5 data-i18n="l4h">Certification Course</h5><p data-i18n="l4p">Get certified as Ayurvedic therapist</p></div>
+          <div class="coming-soon-base"><i class="fas fa-hourglass-half"></i> <span data-i18n="comingSoon">Coming Soon</span></div>
         </div>
         <button class="btn-gold" onclick="openLearnModal()" data-i18n="learnEnroll">Enroll Now</button>
       </div>
