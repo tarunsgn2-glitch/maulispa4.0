@@ -269,7 +269,7 @@ const GALLERY_IMGS=[
   {src:"https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&h=500&fit=crop",alt:"Wellness"},
   {src:"https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&h=900&fit=crop",alt:"Therapy Room"},
   {src:"https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&h=420&fit=crop",alt:"Treatment"},
-  {src:"https://images.unsplash.com/photo-1559841644-08984562005b?w=600&h=620&fit=crop",alt:"Oils"},
+  {src:"assets/gallary/countere (1)",alt:"Oils"},
   {src:"https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=420&fit=crop",alt:"Herbs"},
   {src:"https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=720&fit=crop",alt:"Products"},
   {src:"https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=520&fit=crop",alt:"Steam"},
