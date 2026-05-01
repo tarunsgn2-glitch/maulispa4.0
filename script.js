@@ -477,7 +477,7 @@ function navTo(page){
 }
 // Handle browser back/forward
 window.addEventListener('popstate',function(){
-  var hash=(window.location.hash||'home').replace('#','');
+  var hash=(window.location.hash||'home');
   var validPages=['home','therapies','gallery','membership','about','contact','more'];
   navTo(validPages.indexOf(hash)>=0?hash:'home');
 });
