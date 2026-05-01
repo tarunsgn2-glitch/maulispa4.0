@@ -1166,3 +1166,947 @@ select,input,textarea{font-family:var(--fb);}
 
 /* cert card — no extra badge */
 .cert-item { position: relative; }
+
+/* ── LEARNING CENTER — Certification Coming Soon fix ───────── */
+
+/* Remove old base banner */
+.coming-soon-base { display: none !important; }
+.coming-soon-badge { display: none !important; }
+
+/* All 4 cards same style */
+.lg-item,
+.cert-coming {
+  background: var(--surface, #faf9f6);
+  border: 1px solid rgba(0,0,0,.07);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Certification card — slightly different to signal it's special */
+.cert-coming {
+  padding: 0;
+  overflow: hidden;
+  border: 1.5px solid var(--gold, #B7860B);
+}
+
+.cert-top {
+  padding: 20px 20px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* "Coming Soon" strip — inside the cert card at the bottom */
+.cert-soon-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--gold, #B7860B);
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 9px 16px;
+  border-radius: 0;
+}
+
+.cert-soon-strip i {
+  animation: pulse-hourglass 1.8s ease-in-out infinite;
+}
+@keyframes pulse-hourglass {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .6; transform: scale(1.15); }
+}
+
+/* Enroll Now button — common, below all 4 cards */
+.learn-grid + .btn-gold,
+.learn-grid ~ .btn-gold {
+  margin-top: 20px;
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============================================================
+   PATCH 3 — Home hero height matches page-banner + font fix
+   ============================================================ */
+
+/* ── HOME HERO: match .page-banner ratio on all screen sizes ── */
+/* Remove conflicting earlier rules by overriding with higher specificity */
+#page-home .hero,
+.hero {
+  height: clamp(260px, 55vw, 100vh);  /* same feel as page-banner on mobile */
+  min-height: 260px;
+  max-height: 100vh;
+}
+
+/* Desktop — keep it full/tall */
+@media (min-width: 1025px) {
+  #page-home .hero,
+  .hero {
+    height: 100vh;
+    max-height: 100vh;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) and (min-width: 769px) {
+  #page-home .hero,
+  .hero {
+    height: clamp(320px, 50vw, 70vh);
+  }
+}
+
+/* Mobile — exactly match page-banner height */
+@media (max-width: 768px) {
+  #page-home .hero,
+  .hero {
+    height: clamp(260px, 45vw, 380px);  /* matches page-banner clamp(260px,40vw,480px) */
+    min-height: 260px;
+    max-height: 380px;
+  }
+}
+
+@media (max-width: 480px) {
+  #page-home .hero,
+  .hero {
+    height: clamp(220px, 50vw, 300px);
+    min-height: 220px;
+    max-height: 300px;
+  }
+}
+
+/* ── HERO CONTENT: device-responsive font sizes ────────────── */
+/* Desktop */
+.hero-h1 {
+  font-family: var(--fd);
+  font-size: clamp(2rem, 5vw, 5.5rem);
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+
+.hero-eyebrow {
+  font-size: clamp(.65rem, 1.5vw, .85rem);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.hero-sub {
+  font-size: clamp(.78rem, 1.8vw, 1.1rem);
+  color: rgba(255,255,255,.82);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-h1 { font-size: clamp(1.8rem, 4.5vw, 3.5rem); }
+  .hero-sub { font-size: clamp(.75rem, 1.8vw, 1rem); }
+}
+
+/* Mobile — compact, no overflow */
+@media (max-width: 768px) {
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 20px;
+    text-align: center;
+  }
+  .hero-h1 {
+    font-size: clamp(1.3rem, 5.5vw, 2rem);
+    margin-bottom: 8px;
+    line-height: 1.15;
+  }
+  .hero-eyebrow {
+    font-size: clamp(.58rem, 2.2vw, .72rem);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  .hero-sub {
+    font-size: clamp(.7rem, 2.8vw, .88rem);
+    margin-bottom: 16px;
+    max-width: 280px;
+  }
+  .hero-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    max-width: 220px;
+  }
+  .hero-ctas .btn-gold,
+  .hero-ctas .btn-ghost {
+    padding: 9px 16px;
+    font-size: .78rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-h1 { font-size: clamp(1.15rem, 5.5vw, 1.6rem); }
+  .hero-eyebrow { font-size: .6rem; letter-spacing: 1.5px; }
+  .hero-sub { font-size: .68rem; margin-bottom: 12px; }
+  .hero-ctas .btn-gold,
+  .hero-ctas .btn-ghost { padding: 8px 14px; font-size: .74rem; }
+}
+
+/* ============================================================
+   PATCH 4 — Header layout + Hero content positioning fixes
+   ============================================================ */
+
+/* ── 1. HEADER: logo left, nav center, lang+hamburger RIGHT ── */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;   /* logo | nav | right */
+  gap: 12px;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.logo-wrap {
+  flex: 0 0 auto;
+  margin-right: auto;               /* pushes nav + right to their places */
+}
+
+.main-nav {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* header-right always sticks to far right */
+.header-right {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;               /* ensures it goes to the right edge */
+}
+
+/* Mobile: hide nav, keep lang + hamburger RIGHT */
+@media (max-width: 768px) {
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+  }
+
+  .logo-wrap {
+    flex: 1;                        /* takes remaining space after right group */
+    margin-right: 0;
+  }
+
+  .main-nav { display: none; }
+  .main-nav.mobile-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: var(--hh);
+    left: 0; right: 0;
+    background: rgba(13,26,3,.98);
+    padding: 20px;
+    gap: 4px;
+    z-index: 999;
+  }
+
+  .header-right {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 0;
+  }
+
+  .hamburger { display: flex; }
+}
+
+/* ── 2. HERO: never go under fixed header ─────────────────── */
+/* The hero is inside #app which already has padding-top:var(--hh).
+   But the .hero itself is position:relative inside that, so content
+   needs extra top padding to not be clipped by header overlap */
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 0;           /* reset — padding handled by #app */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  max-width: 820px;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 100%;
+}
+
+/* On mobile make sure hero content doesn't hide under header */
+@media (max-width: 768px) {
+  .hero {
+    /* Add extra top offset equal to header height so content starts below header */
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-content {
+    padding: 12px 20px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* ── 3. HERO EYEBROW: always visible ─────────────────────── */
+.hero-eyebrow {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-size: clamp(.6rem, 2.2vw, .82rem);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold, #B7860B);
+  margin-bottom: 10px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .hero-eyebrow {
+    font-size: .6rem;
+    letter-spacing: 2px;
+    white-space: normal;
+    text-align: center;
+  }
+}
+
+/* ── 4. HERO BUTTONS: side-by-side on all screen sizes ──────  */
+.hero-ctas {
+  display: flex;
+  flex-direction: row;           /* side by side */
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.hero-ctas .btn-gold,
+.hero-ctas .btn-ghost,
+.hero-ctas a.btn-ghost {
+  width: auto;
+  min-width: 140px;
+  max-width: 200px;
+  padding: 11px 20px;
+  font-size: clamp(.72rem, 2vw, .9rem);
+  text-align: center;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 360px) {
+  .hero-ctas {
+    flex-direction: column;      /* stack only on very small phones */
+    width: 100%;
+  }
+  .hero-ctas .btn-gold,
+  .hero-ctas .btn-ghost,
+  .hero-ctas a.btn-ghost {
+    width: 100%;
+    max-width: 240px;
+  }
+}
+
+/* ============================================================
+   PATCH 5 — Hero buttons: always side-by-side on ALL devices
+   ============================================================ */
+
+/* Override every previous rule — buttons always row, never column */
+.hero-ctas,
+.hero .hero-ctas {
+  display: flex !important;
+  flex-direction: row !important;   /* NEVER stack on mobile */
+  flex-wrap: nowrap !important;     /* stay on one line */
+  gap: 10px !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: 6px;
+  width: 100%;
+}
+
+.hero-ctas .btn-gold,
+.hero-ctas .btn-ghost,
+.hero-ctas a,
+.hero-ctas a.btn-ghost,
+.hero .hero-ctas > * {
+  flex: 1 1 0 !important;          /* equal width, fill available space */
+  max-width: 180px !important;
+  min-width: 0 !important;
+  padding: 11px 10px !important;
+  font-size: clamp(.62rem, 2.8vw, .84rem) !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  justify-content: center !important;
+  letter-spacing: .3px !important;
+}
+
+/* Slightly larger on tablet+ */
+@media (min-width: 480px) {
+  .hero-ctas .btn-gold,
+  .hero-ctas .btn-ghost,
+  .hero-ctas a,
+  .hero-ctas a.btn-ghost {
+    max-width: 210px !important;
+    padding: 12px 20px !important;
+    font-size: .82rem !important;
+  }
+}
+
+/* Desktop: original spacious sizing */
+@media (min-width: 1025px) {
+  .hero-ctas .btn-gold,
+  .hero-ctas .btn-ghost,
+  .hero-ctas a,
+  .hero-ctas a.btn-ghost {
+    max-width: 240px !important;
+    padding: 13px 28px !important;
+    font-size: .88rem !important;
+    flex: 0 0 auto !important;
+  }
+}
+
+/* ============================================================
+   PATCH 6 — Mobile hero 42vh + button/text final fix
+   ============================================================ */
+
+/* ── MOBILE HERO: exactly 42% of screen height ───────────── */
+@media (max-width: 768px) {
+  #page-home .hero,
+  .hero {
+    height: 42vh !important;
+    min-height: 200px !important;
+    max-height: 42vh !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #page-home .hero,
+  .hero {
+    height: 42vh !important;
+    min-height: 180px !important;
+    max-height: 42vh !important;
+  }
+}
+
+/* ── MOBILE HERO TEXT: smaller, clean, readable ──────────── */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 10px 16px !important;
+    gap: 4px;
+  }
+
+  .hero-eyebrow {
+    font-size: .55rem !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .hero-h1 {
+    font-size: 1.25rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 6px !important;
+  }
+
+  .hero-sub {
+    font-size: .68rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 10px !important;
+    max-width: 260px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-eyebrow {
+    font-size: .5rem !important;
+    letter-spacing: 1.5px !important;
+  }
+
+  .hero-h1 {
+    font-size: 1.1rem !important;
+    margin-bottom: 5px !important;
+  }
+
+  .hero-sub {
+    font-size: .64rem !important;
+    margin-bottom: 8px !important;
+  }
+}
+
+/* ── MOBILE BUTTONS: perfect fit, side by side ───────────── */
+@media (max-width: 768px) {
+  .hero-ctas,
+  .hero .hero-ctas {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 7px !important;
+    width: 100% !important;
+    padding: 0 4px !important;
+    justify-content: center !important;
+  }
+
+  .hero-ctas .btn-gold,
+  .hero-ctas .btn-ghost,
+  .hero-ctas a,
+  .hero-ctas a.btn-ghost,
+  .hero .hero-ctas > * {
+    flex: 1 1 0 !important;
+    max-width: 155px !important;
+    min-width: 0 !important;
+    padding: 8px 6px !important;
+    font-size: .58rem !important;
+    letter-spacing: .25px !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    justify-content: center !important;
+    border-radius: 40px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-ctas .btn-gold,
+  .hero-ctas .btn-ghost,
+  .hero-ctas a,
+  .hero-ctas a.btn-ghost,
+  .hero .hero-ctas > * {
+    max-width: 140px !important;
+    padding: 7px 5px !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* Tablet: moderate */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-h1 { font-size: clamp(1.8rem, 4vw, 3rem) !important; }
+  .hero-sub { font-size: .9rem !important; }
+  .hero-ctas .btn-gold,
+  .hero-ctas .btn-ghost,
+  .hero-ctas a {
+    padding: 11px 22px !important;
+    font-size: .8rem !important;
+  }
+}
+
+/* Desktop stays as-is — no change needed */
+
+/* ============================================================
+   FINAL PATCH — Header right-align, Hero 50vh mobile,
+   Footer padding, Learning cert card inside strip
+   ============================================================ */
+
+/* ── 1. HEADER: language + hamburger always RIGHT on mobile ── */
+.header-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0 16px !important;
+  height: 100% !important;
+  gap: 0 !important;
+}
+.logo-wrap {
+  flex: 0 0 auto !important;
+  margin-right: auto !important;
+}
+.header-right {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-left: 8px !important;
+}
+@media (max-width: 1100px) {
+  .main-nav:not(.mobile-open) { display: none !important; }
+  .hamburger { display: flex !important; }
+}
+
+/* ── 2. HERO: 50vh on mobile, centered content, no overflow ── */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh !important;
+    min-height: 220px !important;
+    max-height: 50vh !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+  }
+  .hero-overlay {
+    background: linear-gradient(160deg,
+      rgba(13,26,3,.70) 0%,
+      rgba(0,0,0,.40) 50%,
+      rgba(13,26,3,.25) 100%) !important;
+  }
+  .hero-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 12px 18px !important;
+    gap: 4px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    position: relative !important;
+    z-index: 2 !important;
+  }
+  .hero-eyebrow {
+    font-size: .52rem !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 4px !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .hero-h1 {
+    font-size: clamp(1.05rem, 4.5vw, 1.5rem) !important;
+    line-height: 1.18 !important;
+    margin-bottom: 5px !important;
+  }
+  .hero-h1 em {
+    display: inline !important;
+  }
+  .hero-sub {
+    font-size: clamp(.6rem, 2.5vw, .78rem) !important;
+    line-height: 1.4 !important;
+    margin-bottom: 10px !important;
+    max-width: 280px !important;
+  }
+  /* Buttons: side-by-side, compact */
+  .hero-ctas {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    justify-content: center !important;
+    width: 100% !important;
+    padding: 0 8px !important;
+  }
+  .hero-ctas .btn-gold,
+  .hero-ctas .btn-ghost,
+  .hero-ctas a {
+    flex: 1 1 0 !important;
+    max-width: 160px !important;
+    min-width: 0 !important;
+    padding: 8px 8px !important;
+    font-size: .56rem !important;
+    letter-spacing: .2px !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+@media (max-width: 480px) {
+  .hero {
+    height: 50vh !important;
+    min-height: 200px !important;
+  }
+  .hero-h1 { font-size: clamp(.95rem, 4.2vw, 1.3rem) !important; }
+  .hero-sub { font-size: .58rem !important; }
+  .hero-ctas .btn-gold,
+  .hero-ctas .btn-ghost,
+  .hero-ctas a {
+    font-size: .52rem !important;
+    padding: 7px 6px !important;
+    max-width: 145px !important;
+  }
+}
+
+/* ── 3. FOOTER: left+right padding on mobile ─────────────── */
+@media (max-width: 768px) {
+  .footer-grid.container,
+  .footer-grid {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .footer-bottom .container,
+  .footer-bottom-inner {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .fc-contact p {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+/* ── 4. LEARNING CENTER: cert card gold border + green strip INSIDE ── */
+
+/* Reset old coming-soon-base (hide it — we moved it inside the card) */
+.coming-soon-base { display: none !important; }
+.coming-soon-badge { display: none !important; }
+
+/* All 4 lg-items: consistent style */
+.lg-item {
+  background: var(--warm, #FAF7F0);
+  border: 1px solid rgba(0,0,0,.07);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Certification card: gold border, no padding (strip at bottom needs edge-to-edge) */
+.lg-cert-card {
+  background: var(--warm, #FAF7F0);
+  border: 2px solid var(--gold, #C8A96E) !important;
+  border-radius: 14px !important;
+  padding: 0 !important;
+  overflow: hidden;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 0 !important;
+}
+
+/* Content area inside cert card */
+.lg-cert-top {
+  padding: 16px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Green "Coming Soon" strip at bottom of cert card */
+.lg-cert-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  background: var(--green, #1A2E0A);
+  color: #fff;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+  border-radius: 0;
+  margin-top: auto;
+}
+.lg-cert-strip i {
+  font-size: .85rem;
+  animation: spin-hg 1.8s ease-in-out infinite;
+}
+@keyframes spin-hg {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .6; transform: scale(1.2) rotate(15deg); }
+}
+
+/* cert card icon and text color matches gold theme */
+.lg-cert-card .lg-cert-top i {
+  font-size: 1.2rem;
+  color: var(--gold-dk, #A07840);
+  margin-bottom: 4px;
+}
+.lg-cert-card .lg-cert-top h5 {
+  font-size: .88rem;
+  color: var(--green, #1A2E0A);
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+.lg-cert-card .lg-cert-top p {
+  font-size: .76rem;
+  color: var(--text3, #888);
+}
+
+/* On mobile: learn-grid single column so all 4 cards are full width */
+@media (max-width: 540px) {
+  .learn-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ============================================================
+   CRITICAL FIX — Mobile nav, hamburger, all devices
+   ============================================================ */
+
+/* Mobile nav: hidden by default, shown when .mobile-open */
+@media (max-width: 1100px) {
+  .main-nav {
+    display: none !important;
+  }
+  .main-nav.mobile-open {
+    display: flex !important;
+    flex-direction: column !important;
+    position: fixed !important;
+    top: var(--hh) !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: rgba(13,26,3,.99) !important;
+    padding: 16px 20px !important;
+    gap: 4px !important;
+    z-index: 998 !important;
+    border-bottom: 1px solid rgba(200,169,110,.2) !important;
+    box-shadow: 0 8px 30px rgba(0,0,0,.5) !important;
+    max-height: calc(100vh - var(--hh)) !important;
+    overflow-y: auto !important;
+  }
+  .main-nav.mobile-open .nl {
+    padding: 13px 16px !important;
+    border-radius: 10px !important;
+    font-size: .9rem !important;
+    display: block !important;
+  }
+  .hamburger {
+    display: flex !important;
+    cursor: pointer !important;
+    padding: 8px !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+/* Header right - always right aligned */
+@media (max-width: 1100px) {
+  .header-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 14px !important;
+  }
+  .logo-wrap {
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+  .header-right {
+    flex: 0 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-left: auto !important;
+  }
+  .lang-trigger {
+    padding: 5px 10px !important;
+    font-size: .76rem !important;
+  }
+}
+
+/* Ensure pages work correctly */
+.page { display: none !important; }
+.page.active { display: block !important; }
+
+/* Footer mobile spacing */
+@media (max-width: 768px) {
+  .footer .container,
+  .footer-grid {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+  .footer-bottom .container {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+  .fc-contact p,
+  .footer-bio {
+    word-break: break-word !important;
+  }
+}
+
+/* Language menu z-index fix */
+.lang-menu {
+  z-index: 1100 !important;
+}
+.lang-menu.open {
+  display: block !important;
+}
+
+/* ============================================================
+   FINAL HERO MOBILE FIX — 42vh height, content perfectly fit
+   ============================================================ */
+@media (max-width: 768px) {
+  .hero {
+    height: 42vh !important;
+    min-height: 190px !important;
+    max-height: 42vh !important;
+  }
+
+  .hero-content {
+    padding: 8px 14px !important;
+    gap: 3px !important;
+  }
+
+  .hero-eyebrow {
+    font-size: .48rem !important;
+    letter-spacing: 1.5px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .hero-h1 {
+    font-size: clamp(.9rem, 4vw, 1.3rem) !important;
+    line-height: 1.15 !important;
+    margin-bottom: 4px !important;
+  }
+
+  .hero-h1 em { display: inline !important; }
+
+  .hero-sub {
+    font-size: clamp(.55rem, 2.2vw, .72rem) !important;
+    margin-bottom: 8px !important;
+    line-height: 1.35 !important;
+    max-width: 260px !important;
+  }
+
+  .hero-ctas {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+    justify-content: center !important;
+  }
+
+  .hero-ctas .btn-gold,
+  .hero-ctas .btn-ghost,
+  .hero-ctas a.btn-ghost {
+    flex: 1 1 0 !important;
+    max-width: 148px !important;
+    padding: 7px 5px !important;
+    font-size: .5rem !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    justify-content: center !important;
+    letter-spacing: .15px !important;
+  }
+
+  .hero-progress { display: none !important; }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 42vh !important;
+    min-height: 170px !important;
+  }
+
+  .hero-h1 { font-size: clamp(.82rem, 3.8vw, 1.1rem) !important; }
+  .hero-sub { font-size: .52rem !important; }
+
+  .hero-ctas .btn-gold,
+  .hero-ctas .btn-ghost,
+  .hero-ctas a.btn-ghost {
+    font-size: .48rem !important;
+    padding: 6px 4px !important;
+    max-width: 136px !important;
+  }
+}
