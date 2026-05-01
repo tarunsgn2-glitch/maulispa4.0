@@ -461,9 +461,9 @@ function navTo(page){
   try{window.scrollTo({top:0,behavior:'smooth'});}catch(e){window.scrollTo(0,0);}
   // Update hash for GitHub Pages deep linking
   if(history.pushState){
-    history.pushState(null,null,'#'+page);
+    history.pushState(null,null, +page);
   } else {
-    window.location.hash='#'+page;
+    window.location.hash= +page;
   }
   // Close mobile nav
   var nav=document.getElementById('mainNav');
@@ -477,7 +477,7 @@ function navTo(page){
 }
 // Handle browser back/forward
 window.addEventListener('popstate',function(){
-  var hash=(window.location.hash||'#home').replace('#','');
+  var hash=(window.location.hash||'home').replace('#','');
   var validPages=['home','therapies','gallery','membership','about','contact','more'];
   navTo(validPages.indexOf(hash)>=0?hash:'home');
 });
